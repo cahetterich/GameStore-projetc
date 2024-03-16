@@ -1,0 +1,229 @@
+.cabecalho {
+max-width: auto;
+width: 100%;
+display: flex;
+justify-content: space-between;
+background-color: var(--color-quarta);
+box-shadow: 0 1px 20px var(--color-quarta);
+border-radius: 15px;
+top: 0;
+position: sticky;
+z-index: 1;
+}
+
+.bar-nav {
+    width: 10%;  
+    height: auto;  
+    margin-bottom: 1rem;          
+  }
+  
+  .nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 5rem;    
+  }  
+    
+  .nav-container {
+      display: block;    
+    }
+    
+    .nav-container .checkbox {
+        position: absolute;       
+        height: 50px;
+        width: 30px;
+        top: 20px;
+        left: 20px;
+        z-index: 5;
+        opacity: 0;
+        cursor: pointer;
+    }
+    
+    .nav-container .hamburger-lines {
+    display: block;
+    height: 26px;
+    width: 32px;
+    position: absolute;
+    top: 17px;
+    left: 20px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;       
+}
+  
+  .nav-container .hamburger-lines .line {
+    display: block;
+    height: 4px;
+    width: 100%;
+    border-radius: 10px;
+    background: var(--color-primeira);
+}
+  
+  .nav-container .hamburger-lines .line1 {
+    transform-origin: 0% 0%;
+    transition: transform 0.4s ease-in-out;
+}
+  
+  .nav-container .hamburger-lines .line2 {
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .nav-container .hamburger-lines .line3 {
+    transform-origin: 0% 100%;
+    transition: transform 0.4s ease-in-out;
+}
+  
+.bar-nav .nav-container li {
+  margin: 1rem; 
+ text-align: center;
+ align-items: center;
+ flex-direction: column;
+  list-style: none;
+  cursor: pointer;
+}
+
+.bar-nav .nav-container a {
+  text-decoration: none;
+  color: var(--color-primeira);    
+  font-size: 2rem;
+  text-align: center;
+  align-items: center;    
+}
+
+.bar-nav .nav-container a:hover{
+    font-weight: bolder;    
+    font-weight: 800;
+}
+
+  .bar-nav .menu-items {
+    padding-top: 2rem; 
+    padding-bottom: 1rem;  
+    height: auto;
+    width: 700%;
+    transform: translate(-180%);
+    display: flex;
+    flex-direction: column;
+    margin-left: -3rem;
+    padding-left: 5rem;
+    transition: transform 0.5s ease-in-out;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.822);
+    -webkit-backdrop-filter: blur(34px);
+    backdrop-filter: blur(34px);     
+    border-radius: 15px;
+  }
+  
+  .bar-nav .menu-items li {
+    margin-bottom: 2rem;    
+    display: flex;
+    text-align: center;
+    align-items: center;
+    background-color: var(--color-terceira);
+  }
+
+  .bar-nav .menu-items i{
+    margin: 1rem;    
+    font-size: 2rem;   
+    text-align: center;
+    align-items: center;     
+  }
+  
+  .pag-inicio {        
+    font-size: 1.1rem;    
+    margin-top: 1.5rem;
+    margin-right: 1.5rem;       
+  }
+
+  .pag-inicio:hover h1 {
+    color: var(--color-quinta);    
+    cursor: pointer;  
+  }
+  .pag-inicio, .container-sub-menu a {   
+  text-decoration: none;
+}
+  .nav-container input[type="checkbox"]:checked ~ .menu-items {
+    transform: translateX(0);
+  }
+  
+  .nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line1 {
+    transform: rotate(45deg);
+  }
+  
+  .nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line2 {
+    transform: scaleY(0);
+  }
+  
+  .nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line3 {
+    transform: rotate(-45deg);
+  }
+ 
+.container-sub-menu {       
+    margin-top: 1.5rem;
+    margin-right: 1rem;    
+    font-size: 2rem; 
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+ }
+
+.container-sub-menu ul{    
+   display: flex;
+   flex-direction: row;  
+   gap: 2rem;
+}
+
+.container-sub-menu li{    
+    list-style: none;     
+} 
+
+.container-sub-menu a{   
+    display: inline-block; 
+    font-size: 0;
+}
+
+.container-sub-menu a .icon-menu {
+  font-size: 2rem; 
+}
+
+.container-sub-menu a:hover .icon-menu,
+.container-sub-menu a:focus .icon-menu {
+  color: var(--color-quinta);
+  cursor: pointer;
+  box-shadow: 0px 20px 61px 0px rgb(66, 235, 212);
+}
+
+
+@media only screen and (min-width: 768px) {
+  
+     .pag-inicio {        
+      font-size: 2rem;       
+      margin-top: auto;
+      margin-right: auto;    
+    }
+     
+    .bar-nav .menu-items {    
+      width: 300%;   
+    }
+
+    .bar-nav .menu-items i{      
+      font-size: 2.5rem;        
+    }
+
+    .container-sub-menu {       
+      margin: auto 2rem auto 0;      
+      font-size: 2rem; 
+    } 
+}
+
+@media only screen and (min-width: 1024px) {
+
+    .container-sub-menu a {
+      display:contents;
+      gap: 3rem;    
+    }
+    
+    .container-sub-menu ul{   
+      gap: 5rem;
+    }
+}
